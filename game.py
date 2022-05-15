@@ -31,6 +31,7 @@
 
 
 
+
 #финальный спрайт (Делает Ширяев Андрей)
 class FinalSprite(sprite.Sprite):
     def _init_(self, player_image, player_x, player_y, player_speed):
@@ -129,26 +130,17 @@ class Enemy(sprite.Sprite): # - враг
             self.rect.x += 5
 
 #запуск игры (Делает Лущик Артем)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+display.set_caption("ARCADA")
+window = display.set_mode([win_width, win_height])
+back = transform.scale(image.load(img_file_back).convert(), (win_width, win_height))
+all_sprites = sprite.Group()
+barriers = sprite.Group()
+enemies = sprite.Group()
+bombs = sprite.Group()
+robin = Hero(img_file_hero)
+all_sprites.add(robin)
 
 #создание стен
-
-
 
 
 
